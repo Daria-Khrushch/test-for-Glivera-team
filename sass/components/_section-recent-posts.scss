@@ -1,0 +1,114 @@
+.recent-posts {
+  margin-bottom: 40px;
+
+  &_title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 44px;
+
+    margin-left: 30px;
+    margin-bottom: 40px;
+  }
+}
+
+.posts {
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 30px;
+  margin-bottom: 12px;
+
+  &_image {
+    margin-bottom: 18.63px;
+  }
+
+  &_article {
+    font-weight: 300;
+    line-height: 34px;
+    font-size: 24px;
+    margin-bottom: 12.37px;
+  }
+
+  &_text {
+      color: $accent-color;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+
+      margin-bottom: 12px;
+  }
+}
+
+.posts-data {
+    margin-bottom: 8px;
+
+  &_name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+
+  &_date {
+    color: #889099;
+    margin-left: 8px;
+  }
+}
+
+.posts-comment {
+  display: flex;
+  align-items: center;
+margin-bottom: 57px;
+position: relative;
+
+  &_logo {
+    width: 16px;
+    height: 15.92px;
+  }
+
+  &_number {
+    font-weight: 400;
+    font-size: 14px;
+    color: #889099;
+
+    margin-left: 9px;
+   
+  }
+}
+
+.posts-comment::after{
+    content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #F2F2F2;
+
+    top: 60px;
+    width: 315px;
+    
+}
+
+.posts-btn{
+    width: 315px; 
+    height: 40px;
+    border: 1px solid $accent-color;
+        border-radius: 30px;
+        color: $accent-color;
+        background-color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-bottom: 71px;
+}
+
+.posts-btn:hover,
+.posts-btn:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}

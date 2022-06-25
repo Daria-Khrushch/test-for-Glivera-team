@@ -1,0 +1,58 @@
+.header {
+background-color: $primary-color;
+position: relative;
+padding: 10px 38px 13px 20px;
+&_container {
+    display: flex;
+    align-items: center;
+    
+}
+
+&_icon{
+    width: 24px;
+     height: 24px;
+    position: absolute;
+    left: 90.93%;
+        right: 2.67%;
+        top: 14.49%;
+        bottom: 50.72%;
+}
+}
+
+.alert {
+display: flex;
+    align-items: center;
+    margin-right: 95px;
+    &_image {
+        margin-right: 4px;
+        width: 24px;
+        height: 24px;
+    }
+
+    &_text {
+        color: $alert-color;
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 700;
+    }
+}
+
+.info {
+    color:#FFFFFF;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.address{
+    list-style: none;
+    display: flex;
+
+    &_item {
+        color: #889099;
+        font-size: 12px;
+        &:not(:last-child) {
+                margin-right: 15px;
+            }
+    }
+}
+

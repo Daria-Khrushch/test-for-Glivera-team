@@ -1,0 +1,74 @@
+.footer {
+  padding: 44px 20px 49px 20px;
+
+  &_title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 54px;
+  }
+}
+
+.company,
+.programs,
+.legal,
+.about,
+.social,
+.learn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323642;
+  margin-bottom: 18px;
+
+  &_list {
+    list-style: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #889099;
+    margin-bottom: 35px;
+  }
+}
+
+.company_list {
+  margin-right: 25px;
+}
+
+.legal_list {
+  margin-right: 37px;
+}
+
+.footer_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: unset;
+}
+
+.footer_list_item {
+  margin-bottom: 10px;
+}
+
+.social_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  justify-content: space-between;
+
+  &_item {
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.about_list{
+    margin-bottom: 18px;
+}
