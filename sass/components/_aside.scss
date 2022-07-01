@@ -1,96 +1,153 @@
-.aside{
-    margin-left: 34.5px;
+.aside {
+  margin-left: 34.5px;
+  @media screen and (min-width: 1200px) {
+    width: 37%;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+    border-color: #ebeced;
+    border-image: linear-gradient(
+        180deg,
+        rgb(235, 236, 237) 85%,
+        rgb(255, 255, 255) 80%
+      )
+      1;
+    padding-left: 59px;
+  }
 
-    &_title {
-        display: flex;
-        align-items: center;
-        margin-bottom: 35px;
-
-        &_image{
-            width: 38.68px;
-            height: 39.77px;
-        }
-
-        &_text{
-            margin-left: 30.82px;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 34px;
-        }
-    }
-}
-
-.aside_list{
-    list-style: none;
-    margin-left: 10px;
-    margin-bottom: 102px;
-    
-    &_marker{
-        color: $accent-color;
-    }
-    &_text{
-        color: $primary-color;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-    }
-}
-
-.aside_list_marker{
+  &_search {
+    margin-bottom: 40px;
     position: relative;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 43px;
+    }
+
+    &_input {
+      font-weight: 300;
+      font-size: 18px;
+      color: $primary-color;
+      width: 335px;
+      height: 59px;
+      border: 1px solid #d7d8d9;
+      border-radius: 4px;
+    }
+
+    &_input::placeholder {
+      font-weight: 300;
+      font-size: 18px;
+      color: $primary-color;
+      padding-left: 58px;
+    }
+
+    &_icon {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      left: 20px;
+      top: 21px;
+    }
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+
+    &_image {
+      width: 38.68px;
+      height: 39.77px;
+
+      @media screen and (min-width: 1200px) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &_text {
+      margin-left: 30.82px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+
+.aside_list {
+  list-style: none;
+  margin-left: 10px;
+  margin-bottom: 102px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 72px;
+  }
+
+  &_marker {
+    color: $accent-color;
+  }
+  &_text {
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.aside_list_marker {
+  position: relative;
 }
 
 .aside_list_marker:before {
-    content: '';
-    display: inline-block;
-    height: 4px;
-    width: 4px;
-    vertical-align: middle;
-    border-radius: 50%;
-    background-color: $accent-color;
-    margin-right: 5px;
+  content: '';
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  vertical-align: middle;
+  border-radius: 50%;
+  background-color: $accent-color;
+  margin-right: 5px;
 }
 
-.decoration::after{
-    content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #F2F2F2;
-    
-        top: 90px;
-        width: 315px;
+.decoration::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+
+  top: 90px;
+  width: 315px;
 }
 
 .decor::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: #F2F2F2;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
 
-    top: 60px;
-    width: 315px;
+  top: 60px;
+  width: 315px;
 }
 
-.cloud{    
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 34px;
+.cloud {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 34px;
 }
 
-.aside_image{
-    margin-bottom: 60px;
+.aside_image {
+  margin-bottom: 60px;
 }
 
-.text_image{
-    margin-top: 15px;
-    margin-left: -10px;
-    margin-bottom: 69.38px;
+.text_image {
+  margin-top: 15px;
+  margin-left: -10px;
+  margin-bottom: 69.38px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }

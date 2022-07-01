@@ -8,6 +8,26 @@
     color: #ffffff;
     padding-top: 60px;
     margin-bottom: 40px;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 48px;
+      font-weight: 300;
+      line-height: 64px;
+      letter-spacing: -0.5px;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+    }
+  }
+
+  &_layout {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }
 .title_part {
@@ -21,9 +41,16 @@
   width: 315px;
   margin-left: 30px;
   margin-bottom: 20px;
-  display: flexbox;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
   padding: 48px 55px 40px 55px;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    height: 340px;
+    padding: 48px 55px 0px 55px;
+  }
 
   &_title {
     position: relative;
@@ -43,29 +70,39 @@
     background: #4cb649;
   }
 
-  &_btn{
+  &_btn {
     width: 205px;
-        height: 40px;
-        border: 1px solid $accent-color;
-        border-radius: 30px;
-        color: $accent-color;
-        background-color: #fff;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 18px;
-        margin-top: 30px;
-        cursor: pointer;
-        transition: all300ms ease;
+    height: 40px;
+    border: 1px solid $accent-color;
+    border-radius: 30px;
+    color: $accent-color;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: all300ms ease;
   }
 
-  
+  &_text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    text-align: center;
+
+    color: #323642;
+  }
 }
 .payment_container_btn:hover,
 .payment_container_btn:focus,
 .accent_btn:hover,
 .accent_btn:focus {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-        rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .price_container {
@@ -76,10 +113,10 @@
   position: relative;
   margin-bottom: 46px;
 
-  &_dollar{
+  &_dollar {
     position: absolute;
     bottom: 30px;
-    left: 25px;
+    left: 15px;
   }
 
   &_number {
@@ -91,153 +128,226 @@
   }
 }
 
-.accent_container{
-    border: 4px solid #FF8D00
+.accent_container {
+  border: 4px solid #ff8d00;
+
+  @media screen and (min-width: 1200px) {
+    width: 380px;
+    height: 380px;
+    border: 4px solid $accent-color;
+  }
 }
 
-.accent_btn{
-    color: #fff;
-    background: linear-gradient(0deg, #FF8D00 3.81%, #FFA400 97.78%);
-        border-radius: 30px;
-        width: 205px;
-        border: 0px;
-            height: 40px;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 18px;
-            margin-top: 30px;
-            cursor: pointer;
-            transition: all300ms ease;
+.accent_btn {
+  color: #fff;
+  background: linear-gradient(0deg, #ff8d00 3.81%, #ffa400 97.78%);
+  border-radius: 30px;
+  width: 205px;
+  border: 0px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all300ms ease;
+
+  @media screen and (min-width: 1200px) {
+    background: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
+  }
 }
 
-.previous-price{
-    font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-    
-        color: #F24458;
-        margin-right: -17px;
+.previous-price {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: #f24458;
+  margin-right: -17px;
 }
 
-.price-save{
-    font-style: normal;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 22px;
-        color: #323642;
-        margin-left: 66px;
+.price-save {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: #323642;
 }
 
-.price_container::after{
-    content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: #F2F2F2;
-    
-        top: 85px;
-        width: 200px;
+.price-btn_desktop {
+  @media screen and (min-width: 1200px) {
+    margin-top: 15px;
+  }
 }
 
-.payment_container_title::after{
-    content: '';
-        display: block;
-        position: absolute;
-        left: 43.9%;
-            right: 44.39%;
-        width: 24px;
-        height: 2px;
-        background-color: $accent-color;
-        top: 30px;
+.price_container_desktop {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 35px;
+  }
 }
 
-.previous-price_container{
-   display: flexbox;
-   text-align: center;
-   align-items: center;
+.price_container::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
 
-    &_text {
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 22px;
-            letter-spacing: 0px;
-            margin-left: 25px;
-        }
+  top: 85px;
+  width: 200px;
 }
 
-.payment_ways{
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 28px;
-        letter-spacing: 0px;
-        color: #fff;
-        display: block;
-        text-align: center;
-        margin-top: 36px;
-        margin-bottom: 21.52px;
-
-        &_list{
-          padding-left: 33px;
-          padding-right: 33px;
-          display: flex;
-          flex-wrap: wrap;
-          list-style: none;
-          justify-content: center;
-        }
+.payment_container_title::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 30%;
+  width: 24px;
+  height: 2px;
+  background-color: $accent-color;
+  top: 30px;
 }
 
-.visa{
+.previous-price_container {
+  display: flexbox;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 4px;
+
+  &_text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin-left: 25px;
+  }
+}
+
+.payment_ways {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin-top: 36px;
+  margin-bottom: 21.52px;
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  &_list {
+    padding-left: 33px;
+    padding-right: 33px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+
+    @media screen and (min-width: 1200px) {
+      padding: 0;
+      align-items: center;
+    }
+  }
+}
+
+.ways_layout {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 54px;
+    margin-bottom: 33px;
+  }
+}
+
+.visa {
   margin-right: 31.52px;
   margin-bottom: 39.5;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
-.mastercard{
+.mastercard {
   margin-right: 37.02px;
   margin-bottom: 31.84px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .american-express {
   margin-bottom: 33.13px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
 }
 .pay-pal {
   margin-right: 25.03px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .bitcoin {
   margin-right: 25px;
   margin-bottom: 30.79px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .ok-pay {
   margin-bottom: 39.5;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: 40px;
+    margin-top: -8px;
+  }
 }
 .amazon {
   margin-bottom: 42px;
-}
-
-.payment_links{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-list-style: none;
-
-
-  &_item{
-    font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 18px;
-      letter-spacing: 0.8px;
-      color: $accent-color;
-      margin-bottom: 40px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 
-.payment_link{
-  margin-right: 18px;
+.payment_links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+
+  &_item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+    color: $accent-color;
+    margin-bottom: 40px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 57px;
+      margin-right: 44px;
+    }
+  }
 }
 
-.payment_links:last-child{
+.payment_link {
+  margin-right: 18px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 17px;
+  }
+}
+
+.payment_links:last-child {
   padding-bottom: 4px;
 }

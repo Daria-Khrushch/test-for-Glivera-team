@@ -3,52 +3,129 @@
   display: flex;
   align-items: center;
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 52px;
+    margin-bottom: 46px;
+    padding: 0;
+  }
+
   &_title {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 18px;
     margin-right: 43px;
+    @media screen and (min-width: 1200px) {
+      padding-left: 10px;
+    }
   }
 
   &_icon {
     width: 24px;
     height: 16px;
     margin-right: 24px;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
   }
 
   &_btn {
     list-style: none;
 
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      margin-left: 268px;
+    }
+
     &_login {
       display: none;
+
+      @media screen and (min-width: 1200px) {
+        display: block;
+        margin-right: 10px;
+        width: 90px;
+        height: 39px;
+        border: 1px solid $accent-color;
+        border-radius: 30px;
+        color: $accent-color;
+        background-color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     &_start {
-        font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            letter-spacing: 0.800000011920929px;
-            text-align: center;
-            color: #FFFFFF;
-            width: 126px;
-            height: 40px;
-            background: linear-gradient(0deg, #4CB649 0%, #5DDF5A 100%);
-            border-radius: 20px;
-            border: 0;
-            cursor: pointer;
-             transition: all300ms ease;
-  border-radius: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0.800000011920929px;
+      text-align: center;
+      color: #ffffff;
+      width: 126px;
+      height: 40px;
+      background: linear-gradient(0deg, #4cb649 0%, #5ddf5a 100%);
+      border-radius: 20px;
+      border: 0;
+      cursor: pointer;
+      transition: all300ms ease;
+      border-radius: 20px;
+
+      @media screen and (min-width: 1200px) {
+        width: 160px;
+      }
     }
   }
 }
 
 .nav_btn_start:hover,
-.nav_btn_start:focus {
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+.nav_btn_start:focus,
+.nav_btn_login:hover,
+.nav_btn_login:focus {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
-
 .navigation {
   display: none;
+
+  &_item {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &_icon {
+    margin-left: 8px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    list-style: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323642;
+  }
+}
+
+.line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  width: 100%;
+  height: 3px;
+  background-color: $accent-color;
+  top: 125%;
 }
